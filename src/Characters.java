@@ -8,14 +8,17 @@ public abstract class Characters implements ICharacters{
     protected int agility;
     protected int inteligency;
 
-
-    public Characters(String scream, String name, int lvl, int strenght, int agility, int inteligency){
-        this.name=name;
-        this.lvl=lvl;
-        this.lifePoint=lvl*5;
-        this.strenght=strenght;
-        this.agility=agility;
-        this.inteligency=inteligency;
+    public Characters(String scream, String name, int lvl, int strenght, int agility, int inteligency)throws  CharactersException{
+        if(lvl<(strenght+agility+inteligency)){
+            throw new CharactersException();
+        }else {
+            this.name = name;
+            this.lvl = lvl;
+            this.lifePoint = lvl * 5;
+            this.strenght = strenght;
+            this.agility = agility;
+            this.inteligency = inteligency;
+        }
     }
 
     public void chooseSkill(){
