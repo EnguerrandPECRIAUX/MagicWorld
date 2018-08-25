@@ -1,12 +1,31 @@
+/**
+ *
+ */
 public  class Skill implements ISkill{
+    /**
+     *
+     */
     protected String skillName;
+    /**
+     *
+     */
     protected int skillEffect;
 
+    /**
+     *
+     * @param skillName
+     * @param skillEffect
+     */
     public Skill(String skillName, int skillEffect){
         this.skillName = skillName;
         this.skillEffect = skillEffect;
     }
 
+    /**
+     *
+     * @param target
+     * @param mySelf
+     */
     public void useSkill(Characters target, Characters mySelf){
         System.out.println(mySelf.getName() + " utilise " + skillName + " et inflige " + skillEffect + " dommages.");
         System.out.println(target.getName() + " perd " + skillEffect + " points de vie");
