@@ -2,10 +2,14 @@ import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.Scanner;
 
+/**
+ *
+ */
 public class Game {
     /**
      *
      * @see Game#Game
+     * @see Game#Game(int)
      * @see Game#namedPlayer
      * @see Game#startGame
      */
@@ -28,6 +32,15 @@ public class Game {
      */
     public Game(){
         this.nbPlayer=2;
+        startGame();
+    }
+
+    /**
+     *
+     * @param nbPlayer
+     */
+    public Game(int nbPlayer){
+        this.nbPlayer=nbPlayer;
         startGame();
     }
 
