@@ -49,7 +49,7 @@ public class Game {
      */
     private void namedPlayer(){
 
-        if(nbPlayer=2){
+        if(nbPlayer==2){
             playerList.add("Joueur 1");
             playerList.add("Joueur 2");
         }else{
@@ -85,17 +85,32 @@ public class Game {
             switch (classCRT) {
                 case 1:
                     // Warrior
-                    Warrior warriorCRT = new Warrior("Woarg",playerList.get(idPlayer),lvlCRT,frcCRT,agiCRT,intCRT);
+                    Warrior warriorCRT = null;
+                    try {
+                        warriorCRT = new Warrior("Woarg", (String) playerList.get(idPlayer),lvlCRT,frcCRT,agiCRT,intCRT);
+                    } catch (CharactersException e) {
+                        e.printStackTrace();
+                    }
                     charactersList.put( playerList.get(idPlayer),warriorCRT);
                     break;
                 case 2:
                     //Ranger
-                    Ranger rangerCRT = new Ranger("Je suis le ranger, ce donjon n'a jamais était explorer",playerList.get(idPlayer),lvlCRT,frcCRT,agiCRT,intCRT);
+                    Ranger rangerCRT = null;
+                    try {
+                        rangerCRT = new Ranger("Je suis le ranger, ce donjon n'a jamais était explorer", (String) playerList.get(idPlayer),lvlCRT,frcCRT,agiCRT,intCRT);
+                    } catch (CharactersException e) {
+                        e.printStackTrace();
+                    }
                     charactersList.put( playerList.get(idPlayer),rangerCRT);
                     break;
                 case 3:
                     //Wizard
-                    Wizard wizardCRT = new Wizard("Abracadabra",playerList.get(idPlayer),lvlCRT,frcCRT,agiCRT,intCRT);
+                    Wizard wizardCRT = null;
+                    try {
+                        wizardCRT = new Wizard("Abracadabra", (String) playerList.get(idPlayer),lvlCRT,frcCRT,agiCRT,intCRT);
+                    } catch (CharactersException e) {
+                        e.printStackTrace();
+                    }
                     charactersList.put( playerList.get(idPlayer),wizardCRT);
                     break;
                 default:
