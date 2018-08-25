@@ -16,8 +16,8 @@ public class Ranger extends Characters {
      * @param agility
      * @param inteligency
      */
-    public Ranger(String scream, String name, int lvl, int strenght, int agility, int inteligency){
-        super(lvl,strenght,agility,inteligency);
+    public Ranger(String scream, String name, int lvl, int strenght, int agility, int inteligency) throws CharactersException {
+        super(scream,name,lvl,strenght,agility,inteligency);
         this.basicAttack = new Skill("Tir à l’Arc",agility);
         this.specialSkill = new Concentration("Concentration",agility);
     }

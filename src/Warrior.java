@@ -16,8 +16,8 @@ public class Warrior extends Characters {
      * @param agility
      * @param inteligency
      */
-    public Warrior(String scream, String name, int lvl, int strenght, int agility, int inteligency){
-        super(name,lvl,strenght,agility,inteligency);
+    public Warrior(String scream, String name, int lvl, int strenght, int agility, int inteligency) throws CharactersException {
+        super(scream,name,lvl,strenght,agility,inteligency);
         this.basicAttack = new Skill("Coup d’Épée",strenght);
         this.specialSkill = new RageBlow("Coup de Rage",strenght);
     }

@@ -72,7 +72,7 @@ public abstract class Characters implements ICharacters{
      * @param target
      */
     public void useBasicAttack(Characters target) {
-        basicAttack.useSkill(target, this)
+        basicAttack.useSkill(target, this);
     }
 
     /**

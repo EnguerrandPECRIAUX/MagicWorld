@@ -16,8 +16,8 @@ public class Wizard extends Characters {
      * @param agility
      * @param inteligency
      */
-    public Wizard(String scream, String name, int lvl, int strenght, int agility, int inteligency){
-        super(lvl,strenght,agility,inteligency);
+    public Wizard(String scream, String name, int lvl, int strenght, int agility, int inteligency) throws CharactersException {
+        super(scream,name,lvl,strenght,agility,inteligency);
         this.basicAttack = new Skill("Boule de Feu",inteligency);
         this.specialSkill = new Heal("Soin",inteligency);
     }
