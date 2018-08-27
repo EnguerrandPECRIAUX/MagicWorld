@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 /**
  *
@@ -63,8 +64,10 @@ public abstract class Characters implements ICharacters{
     /**
      *
      */
-    public void chooseSkill(){
+    public int chooseSkill(){
+        Scanner sc = new Scanner(System.in);
         System.out.println(name + "(" + lifePoint + " Vitalité) veuillez choisir votre action (1: Attaque Basique, 2 : Attaque Spéciale)");
+        return sc.nextInt();
     }
 
     /**
